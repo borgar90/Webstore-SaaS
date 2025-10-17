@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "es2021"],
+    "types": ["node"],
+    "allowJs": false
+  },
+  "include": ["next-env.d.ts", "app/**/*", "src/**/*"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@bfs/core/*": ["packages/core/src/*"],
+      "@bfs/addons/*": ["packages/addons/src/*"],
+      "@bfs/ui/*": ["packages/ui/src/*"],
+      "@bfs/utils/*": ["packages/utils/src/*"],
+      "@bfs/db/*": ["packages/db/src/*"]
+    }
+  }
+}
