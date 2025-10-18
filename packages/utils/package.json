@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "files": ["dist"],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "build": "tsup src/index.ts --format esm,cjs --dts --tsconfig tsconfig.json",
     "dev": "tsup src/index.ts --watch",
     "lint": "eslint src --ext .ts",
     "test": "vitest"

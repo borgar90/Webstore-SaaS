@@ -5,8 +5,11 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
+  "dependencies": {
+    "@bfs/utils": "workspace:*"
+  },
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "build": "tsup src/index.ts --format esm,cjs --dts --tsconfig tsconfig.json",
     "dev": "tsup src/index.ts --watch",
     "lint": "eslint src --ext .ts",
     "test": "vitest"

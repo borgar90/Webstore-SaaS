@@ -8,13 +8,20 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
+  "experimentalDecorators": true,
+  "emitDecoratorMetadata": true,
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
+      "@bfs/core": ["packages/core/src/index.ts"],
       "@bfs/core/*": ["packages/core/src/*"],
+      "@bfs/addons": ["packages/addons/src/index.ts"],
       "@bfs/addons/*": ["packages/addons/src/*"],
+      "@bfs/ui": ["packages/ui/src/index.ts"],
       "@bfs/ui/*": ["packages/ui/src/*"],
+      "@bfs/utils": ["packages/utils/src/index.ts"],
       "@bfs/utils/*": ["packages/utils/src/*"],
+      "@bfs/db": ["packages/db/src/index.ts"],
       "@bfs/db/*": ["packages/db/src/*"]
     }
   }
