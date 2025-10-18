@@ -4,7 +4,9 @@
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "dev": "tsup src/index.ts --watch",
@@ -12,9 +14,10 @@
     "test": "vitest"
   },
   "devDependencies": {
+    "@types/react": "^18.3.26",
+    "eslint": "^8.57.0",
     "tsup": "^8.0.0",
     "typescript": "^5.6.2",
-    "eslint": "^8.57.0",
     "vitest": "^1.6.0"
   },
   "peerDependencies": {

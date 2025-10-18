@@ -29,10 +29,22 @@ export interface TenantConfig {
   active: boolean;
 }
 
+export type { CatalogCategory, CatalogProduct } from './catalog';
+
 export interface ModuleResolutionResult {
   enabled: ModuleManifest[];
   missing: string[];
 }
+
+export const DEFAULT_TENANT_ID = 'demo-store';
+
+export const resolveApiBaseUrl = () => {
+  if (typeof window !== 'undefined') {
+    return process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3001/api';
+  }
+
+  return process.env.NEXT_PUBLIC_API_URL ?? process.env.API_BASE_URL ?? 'http://localhost:3001/api';
+};
 
 export const resolveModuleSelection = (
   available: ModuleManifest[],

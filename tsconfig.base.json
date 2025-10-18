@@ -21,6 +21,8 @@
       "@bfs/ui/*": ["packages/ui/src/*"],
       "@bfs/utils": ["packages/utils/src/index.ts"],
       "@bfs/utils/*": ["packages/utils/src/*"],
+      "@bfs/utils/react": ["packages/utils/src/react/index.ts"],
+      "@bfs/utils/react/*": ["packages/utils/src/react/*"],
       "@bfs/db": ["packages/db/src/index.ts"],
       "@bfs/db/*": ["packages/db/src/*"]
     }
