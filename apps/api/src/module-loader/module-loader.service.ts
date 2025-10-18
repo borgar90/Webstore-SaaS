@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { addonModules, registerAddons } from '@bfs/addons';
-import { coreModules } from '@bfs/core';
+import { coreModuleNames, coreModules } from '@bfs/core';
 import {
   resolveModuleSelection,
   type ModuleManifest,
@@ -21,11 +21,22 @@ export class ModuleLoaderService {
   }
 
   resolveModulesForTenant(config: TenantConfig): ModuleResolutionResult {
+    const normalized = this.normalizeTenantModules(config.modules);
     const available = [...this.coreRegistry, ...this.addonRegistry];
-    return resolveModuleSelection(available, config.modules);
+    return resolveModuleSelection(available, normalized);
   }
 
   resolveAddons(requested: string[]): ModuleResolutionResult {
     return registerAddons(requested);
+  }
+
+  private normalizeTenantModules(modules: string[]) {
+    if (modules.includes('core')) {
+      const unique = new Set([...modules, ...coreModuleNames()]);
+      unique.delete('core');
+      return Array.from(unique);
+    }
+
+    return modules;
   }
 }
